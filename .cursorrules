@@ -1,0 +1,33 @@
+Du arbeitest in einem SwiftUI-Minimalprojekt fuer iOS 16+ zur privaten Zeiterfassung.
+
+Projektziele:
+- Einfache, robuste Zeiterfassung mit Ein- und Ausstempeln.
+- Lokale Persistenz ueber JSON im Documents-Verzeichnis.
+- PDF-Export als mehrseitiger Bericht bei Bedarf (ImageRenderer + CGContext, Teilen ueber ActivityShareSheet).
+
+Architekturregeln:
+- Trenne strikt nach Verantwortlichkeiten:
+  - `TimeEntry`: reines Datenmodell (`Codable`, `Identifiable`).
+  - `TimeStore`: `ObservableObject` fuer State, Geschaeftslogik und Persistenz.
+  - `ContentView`: UI-Interaktion und Darstellung.
+  - `TimeReportView`: reines PDF-Layout in SwiftUI.
+  - `PDFExporter`: PDF-Erzeugung mit `ImageRenderer` + `CGContext`.
+- Halte UI-Code frei von Dateisystem-Persistenzdetails.
+- Halte Persistenzlogik ausserhalb der Views.
+
+Code-Konventionen:
+- SwiftUI only fuer UI, keine externen Libraries.
+- iOS Deployment Target mindestens 16.0.
+- Lesbarer, klar strukturierter Code mit kleinen Funktionen.
+- Kommentare nur fuer nicht-triviale Logik.
+- Keine unnoetige Abstraktion in diesem Lern-/Minimalprojekt.
+
+Fachregeln:
+- Es darf immer nur ein aktiver Startzeitpunkt existieren.
+- Dauer immer aus `end - start` berechnen, nicht manuell speichern.
+- Notiz ist optional und wird getrimmt.
+- Export darf nur mit vorhandenen Eintraegen aktiv sein.
+
+Qualitaet:
+- Nach Aenderungen auf offensichtliche Build-/Syntaxfehler pruefen.
+- Achte auf einfache Erweiterbarkeit (z. B. Filter, Summen, feinere Zeilenzahl pro PDF-Seite).
