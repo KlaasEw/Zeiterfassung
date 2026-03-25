@@ -1,0 +1,31 @@
+# Xcode / macOS
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Build
+build/
+DerivedData/
+*.moved-aside
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# CocoaPods (falls spaeter genutzt)
+Pods/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Umgebung / Geheimnisse
+*.xcconfig.local
+.env
+.env.*
