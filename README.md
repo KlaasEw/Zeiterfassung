@@ -1,6 +1,6 @@
 # Projektzeiterfassung
 
-Kleine **SwiftUI**-App (iOS 16+) zur privaten Zeiterfassung – ohne Cloud, ohne Backend. Dieses Projekt wurde vollständig von AI programiert.
+Kleine **SwiftUI**-App (iOS 18+) zur privaten Zeiterfassung – ohne Cloud, ohne Backend. Dieses Projekt wurde vollständig von AI programiert.
 
 |Ausgestempelt|Eingestempelt|
 |---|---|
@@ -23,7 +23,7 @@ Kleine **SwiftUI**-App (iOS 16+) zur privaten Zeiterfassung – ohne Cloud, ohne
 ## Voraussetzungen
 
 - Xcode (empfohlen: aktuelle stabile Version)
-- **Deployment Target:** iOS **16.0**
+- **Deployment Target:** iOS **18.6**
 - Keine externen Abhängigkeiten
 
 ## Starten
